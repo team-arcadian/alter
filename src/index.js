@@ -1,9 +1,10 @@
-import { parse } from "./parse";
-import { rssify } from "./rssify";
+import { parse } from "./parse.js";
+import { rssify } from "./rssify.js";
 
-const alter = url => {
+const alter = async url => {
   const route = parse(url);
-  return rssify(route);
+  const rss = await rssify(route);
+  return rss;
 };
 
 export { alter };
