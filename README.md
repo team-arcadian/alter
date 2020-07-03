@@ -11,7 +11,7 @@ Install Alter
 Create an alter feed snapshot by calling `alter`
 
 ```
-const rss = alter('https://twitter.com/timthetatman')
+const rss = await alter('https://twitter.com/timthetatman')
 ```
 
 This `rss` variable looks like:
