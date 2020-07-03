@@ -1,10 +1,11 @@
-import { parse } from "./parse.js";
-import { rssify } from "./rssify.js";
+const { parse } = require("./parse.js");
+const { rssify } = require("./rssify.js");
 
 const alter = async url => {
   const route = parse(url);
+  console.log("Final route", route);
   const rss = await rssify(route);
   return rss;
 };
 
-export { alter };
+module.exports = { alter };

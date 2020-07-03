@@ -1,13 +1,14 @@
-import rsshub from "rsshub";
+const rsshub = require("rsshub");
 
 rsshub.init(); // pass configuration
 
 const rssify = route =>
   new Promise((resolve, reject) => {
+    console.log(`Starting RSSHub with ${route}`);
     rsshub
-      .request(url)
+      .request(route)
       .then(resolve)
-      .catch(reject);
+      .catch(err => reject(`The follow error has occured ${err}`));
   });
 
-export { rssify };
+module.exports = { rssify };
