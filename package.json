@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/team-arcadian/alter#readme",
   "dependencies": {
-    "rsshub": "^0.1.1"
+    "rsshub": "^1.0.0"
   }
 }
